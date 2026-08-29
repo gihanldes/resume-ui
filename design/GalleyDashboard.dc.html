@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Libre+Franklin:wght@400;500;600;700&amp;family=Courier+Prime:wght@400;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #f7f4ec; }
+    a { color: #a83a26; } a:hover { color: #7c2a1b; }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #f7f4ec; color: #2a251e; font-family: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;">
+
+  <!-- Masthead -->
+  <div style="display: flex; align-items: baseline; gap: 36px; padding: 20px 56px 14px 56px;">
+    <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 600; font-size: 27px;">Proof.</div>
+    <div style="display: flex; gap: 26px; font-size: 13px; font-weight: 500;">
+      <span style="border-bottom: 2px solid #a83a26; padding-bottom: 3px;">Resumes</span>
+      <span style="color: #6f675c;">History</span>
+      <span style="color: #6f675c;">Account</span>
+    </div>
+    <div style="margin-left: auto; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #6f675c;">jane@example.com &nbsp;·&nbsp; Sign out</div>
+  </div>
+  <div style="margin: 0 56px; border-top: 2px solid #2a251e;"></div>
+  <div style="margin: 3px 56px 0 56px; border-top: 1px solid #2a251e;"></div>
+
+  <!-- Greeting + stats -->
+  <div style="display: flex; align-items: flex-end; gap: 48px; padding: 36px 56px 8px 56px;">
+    <div style="flex: 1;">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.1;">Good morning, Jane.</div>
+      <div style="font-size: 13.5px; color: #6f675c; margin-top: 10px;">Two reviews on the desk. The revision picked up 18 points &#8212; keep going.</div>
+    </div>
+    <div style="display: flex; gap: 36px;">
+      <div style="text-align: right;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f675c;">Reviews</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 32px; margin-top: 2px;">2</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f675c;">Latest</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 32px; margin-top: 2px; color: #3d5aa5;">96</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f675c;">Best</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 32px; margin-top: 2px;">96</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trend -->
+  <div style="padding: 20px 56px 8px 56px;">
+    <div style="display: flex; align-items: baseline; gap: 12px;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6f675c;">Score over time</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 13px; color: #6f675c;">each point is a review &#8212; click one to reopen it</div>
+    </div>
+    <svg width="1328" height="150" viewBox="0 0 1328 150" style="display: block; margin-top: 10px;">
+      <line x1="40" y1="18" x2="1310" y2="18" stroke="#e4ddd0" stroke-width="1"></line>
+      <line x1="40" y1="66" x2="1310" y2="66" stroke="#e4ddd0" stroke-width="1"></line>
+      <line x1="40" y1="114" x2="1310" y2="114" stroke="#e4ddd0" stroke-width="1"></line>
+      <text x="30" y="22" text-anchor="end" font-size="10" fill="#6f675c" font-family="Libre Franklin, Arial, sans-serif">100</text>
+      <text x="30" y="70" text-anchor="end" font-size="10" fill="#6f675c" font-family="Libre Franklin, Arial, sans-serif">50</text>
+      <text x="30" y="118" text-anchor="end" font-size="10" fill="#6f675c" font-family="Libre Franklin, Arial, sans-serif">0</text>
+      <path d="M180 39.1 L1160 21.8" stroke="#2a251e" stroke-width="1.5" fill="none"></path>
+      <circle cx="180" cy="39.1" r="4" fill="#f7f4ec" stroke="#2a251e" stroke-width="1.5"></circle>
+      <circle cx="1160" cy="21.8" r="5" fill="#3d5aa5" stroke="#3d5aa5"></circle>
+      <text x="180" y="60" text-anchor="middle" font-size="12" fill="#6f675c" font-family="Newsreader, Georgia, serif" font-style="italic">78 &#8212; resume-v1</text>
+      <text x="1160" y="46" text-anchor="middle" font-size="12" fill="#3d5aa5" font-family="Newsreader, Georgia, serif" font-style="italic">96 &#8212; resume-v2</text>
+      <text x="180" y="138" text-anchor="middle" font-size="10" fill="#6f675c" font-family="Libre Franklin, Arial, sans-serif">28 AUG</text>
+      <text x="1160" y="138" text-anchor="middle" font-size="10" fill="#6f675c" font-family="Libre Franklin, Arial, sans-serif">28 AUG</text>
+    </svg>
+  </div>
+
+  <!-- Upload tray -->
+  <div style="margin: 22px 56px 0 56px; border: 1.5px dashed #a89f8d; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px; background: #fdfcf8;">
+    <div style="font-family: 'Newsreader', Georgia, serif; font-size: 24px;">Drop a resume on the desk</div>
+    <div style="font-size: 13px; color: #6f675c;">PDF, DOCX or TXT up to 5 MB &#8212; it is read as plain text, the way a screening system reads it.</div>
+    <div style="background: #2a251e; color: #f7f4ec; padding: 13px 24px; font-size: 13px; font-weight: 600; margin-top: 8px;">Choose a file</div>
+  </div>
+
+  <!-- Resume rows -->
+  <div style="padding: 34px 56px 40px 56px;">
+    <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6f675c;">On file</div>
+    <div style="display: flex; flex-direction: column; margin-top: 6px;">
+      <div style="display: flex; align-items: center; gap: 24px; padding: 16px 0; border-bottom: 1px solid #e4ddd0;">
+        <div style="flex: 1;">
+          <div style="font-size: 14.5px; font-weight: 600;">resume-v2.txt</div>
+          <div style="font-size: 12px; color: #6f675c; margin-top: 3px;">28 Aug 2026 &nbsp;·&nbsp; 231 words &nbsp;·&nbsp; 1 page &nbsp;·&nbsp; 1 review</div>
+        </div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 26px; color: #3d5aa5;">96</div>
+        <div style="display: flex; gap: 10px;">
+          <div style="border: 1px solid #2a251e; padding: 11px 18px; font-size: 12.5px; font-weight: 600;">Review again</div>
+          <div style="border: 1px solid #c3baa8; color: #a83a26; padding: 11px 18px; font-size: 12.5px; font-weight: 600;">Delete</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 24px; padding: 16px 0; border-bottom: 1px solid #e4ddd0;">
+        <div style="flex: 1;">
+          <div style="font-size: 14.5px; font-weight: 600;">resume-v1.txt</div>
+          <div style="font-size: 12px; color: #6f675c; margin-top: 3px;">28 Aug 2026 &nbsp;·&nbsp; 169 words &nbsp;·&nbsp; 1 page &nbsp;·&nbsp; 1 review</div>
+        </div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 26px;">78</div>
+        <div style="display: flex; gap: 10px;">
+          <div style="border: 1px solid #2a251e; padding: 11px 18px; font-size: 12.5px; font-weight: 600;">Review again</div>
+          <div style="border: 1px solid #c3baa8; color: #a83a26; padding: 11px 18px; font-size: 12.5px; font-weight: 600;">Delete</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

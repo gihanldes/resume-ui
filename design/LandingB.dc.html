@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;family=Spline+Sans+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #fbfaf7; }
+    a { color: #2a5d46; text-decoration: none; }
+    a:hover { color: #1f4936; text-decoration: underline; }
+    .strike { position: relative; }
+    .strike::after { content: ""; position: absolute; left: -6px; right: -6px; top: 52%; height: 7px; background: #b3372b; transform-origin: left center; transform: scaleX(0); animation: strike 5600ms cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+    @keyframes strike { 0%, 8% { transform: scaleX(0); } 22%, 92% { transform: scaleX(1); } 100% { transform: scaleX(1); } }
+    @keyframes answer { 0%, 24% { opacity: 0; transform: translateY(12px); } 38%, 100% { opacity: 1; transform: translateY(0); } }
+    .answer { animation: answer 5600ms cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+    @keyframes delta { 0%, 40% { opacity: 0; } 52%, 100% { opacity: 1; } }
+    .delta { animation: delta 5600ms ease-out infinite; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0.01ms !important; animation-iteration-count: 1 !important; } .strike::after { transform: scaleX(1); } }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 1020px; overflow: hidden; color: #1c1b16; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; background-color: #fbfaf7; background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 35px, #f0ede4 35px, #f0ede4 36px);">
+
+  <!-- Nav -->
+  <div style="border-bottom: 1px solid #e7e4db; background: #fbfaf7;">
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; align-items: center; height: 62px; padding: 0 40px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">Proof<span style="color: #2a5d46;">.</span></div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 500;">
+        <span style="color: #2a5d46;">Sign in</span>
+        <span style="background: #2a5d46; color: #fbfaf7; border-radius: 6px; padding: 9px 16px; font-weight: 600;">Create an account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Poster hero: the headline is itself proofread -->
+  <div style="max-width: 1240px; margin: 0 auto; padding: 96px 40px 0 40px;">
+    <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #6f6c62;">line 09 of your resume</div>
+
+    <div style="margin-top: 26px; font-size: 88px; line-height: 1.04; font-weight: 800; letter-spacing: -0.035em;">
+      <span class="strike" style="color: #a3a095;">&#8220;Responsible for<br>various tasks.&#8221;</span>
+    </div>
+    <div class="answer" style="margin-top: 34px; font-size: 88px; line-height: 1.04; font-weight: 800; letter-spacing: -0.035em; color: #2a5d46;">
+      &#8220;Cut checkout p99<br>by 43%.&#8221;
+    </div>
+
+    <div class="delta" style="display: flex; align-items: baseline; gap: 16px; margin-top: 44px;">
+      <span style="font-family: 'Spline Sans Mono', monospace; font-size: 15px; font-weight: 600; color: #1c1b16; background: #eceadf; border-radius: 4px; padding: 6px 10px;">54.2</span>
+      <span style="font-family: 'Spline Sans Mono', monospace; font-size: 15px; color: #6f6c62;">becomes</span>
+      <span style="font-family: 'Spline Sans Mono', monospace; font-size: 15px; font-weight: 600; color: #fbfaf7; background: #2a5d46; border-radius: 4px; padding: 6px 10px;">83.9</span>
+      <span style="font-size: 16px; color: #6f6c62; margin-left: 8px;">Proof finds every line like this, and prices the fix.</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 24px; margin-top: 52px;">
+      <span style="background: #2a5d46; color: #fbfaf7; border-radius: 6px; padding: 14px 24px; font-size: 15px; font-weight: 600;">Screen my resume</span>
+      <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Sign in</span>
+      <span style="font-size: 13px; color: #a3a095; margin-left: 8px;">PDF, DOCX or TXT &#183; deterministic score &#183; AI rewrites optional</span>
+    </div>
+  </div>
+
+  <!-- Bottom band: how -->
+  <div style="border-top: 1px solid #1c1b16; margin-top: 88px; background: #fbfaf7;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 28px 40px; display: flex; gap: 64px; font-size: 14px; color: #6f6c62;">
+      <div style="max-width: 320px;"><span style="font-weight: 700; color: #1c1b16;">See the parse.</span> Your resume as the plain text a screening system actually reads.</div>
+      <div style="max-width: 320px;"><span style="font-weight: 700; color: #1c1b16;">Audit the score.</span> Six categories; every deduction names the words that caused it.</div>
+      <div style="max-width: 320px;"><span style="font-weight: 700; color: #1c1b16;">Fix in order.</span> Each finding is priced in points, so you fix the expensive ones first.</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

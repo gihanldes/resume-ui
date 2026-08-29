@@ -1,0 +1,280 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   "Green ink" — editorial-professional. One warm surface, structure from
+   hairline rules and a real type scale, a single pine-green brand color
+   (Proof = approval), severity as colored glyphs and numerals — never pills.
+--------------------------------------------------------------------------- */
+@theme {
+  /* surface & ink */
+  --color-ink: #fbfaf7;          /* the page ground — the only surface */
+  --color-ink-raised: #fbfaf7;   /* legacy alias: no separate card surface */
+  --color-ink-line: #e7e4db;     /* hairline rules */
+  --color-ink-faint: #efece3;    /* lighter rules */
+  --color-ink-text: #1c1b16;
+  --color-ink-muted: #6f6c62;
+  --color-ink-dim: #a3a095;
+
+  /* brand */
+  --color-brand: #2a5d46;        /* pine green: actions, links, pass */
+  --color-brand-deep: #1f4936;
+
+  /* the warm well (source view, tinted containers) */
+  --color-well: #f4f2ec;
+
+  /* paper (the printable report document) */
+  --color-paper: #ffffff;
+  --color-paper-edge: #e7e4db;
+  --color-paper-shade: #f4f2ec;
+  --color-graphite: #1c1b16;
+  --color-graphite-muted: #6f6c62;
+
+  /* legacy chrome tokens (nav is light now; kept so stragglers degrade) */
+  --color-chrome: #1c1b16;
+  --color-chrome-text: #fbfaf7;
+  --color-chrome-muted: #a3a095;
+  --color-chrome-accent: #2a5d46;
+
+  /* severity: red / amber / quiet gray / brand green */
+  --color-mark-critical: #b3372b;
+  --color-mark-warning: #9c6b10;
+  --color-mark-suggestion: #6f6c62;
+  --color-mark-positive: #2a5d46;
+
+  /* soft tints, used sparingly (notices, dialog accents) */
+  --color-tint-critical: #f7e9e6;
+  --color-tint-warning: #f5eedb;
+  --color-tint-suggestion: #efece3;
+  --color-tint-positive: #e8efe9;
+
+  --font-sans: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, Menlo, 'Courier New', monospace;
+
+  --radius-sheet: 6px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-ink-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-ink-text);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: #dbe6dd;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Sections are not boxes: .panel is a plain grouping, structure comes from
+     rules and headers inside the components themselves. */
+  .panel {
+    background: transparent;
+  }
+
+  /* The printable report document. */
+  .sheet {
+    background-color: var(--color-paper);
+    color: var(--color-graphite);
+    border: 1px solid var(--color-paper-edge);
+    border-radius: var(--radius-sheet);
+  }
+
+  /* The warm well: the source view and other set-in containers. */
+  .well {
+    background-color: var(--color-well);
+    border-radius: var(--radius-sheet);
+  }
+
+  /* Small supporting label. */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* Section header: bold title sitting on a hairline. */
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--color-ink-text);
+  }
+}
+
+/* ---------------------------------------------------------------- motion
+   One orchestrated entrance per screen, everything easing out. Durations
+   150/500/900ms; stagger 60-90ms via --i. The reduced-motion block below
+   collapses all of it to final states. */
+@layer base {
+  :root {
+    --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@layer components {
+  /* Entrance: content settles upward into place. Stagger with --i. */
+  .rise {
+    animation: rise 480ms var(--ease-soft) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+
+  /* A value bar filling from the left; width carries the value. */
+  .bar-fill {
+    transform-origin: left center;
+    animation: bar-fill 720ms var(--ease-soft) both;
+    animation-delay: calc(150ms + var(--i, 0) * 70ms);
+  }
+
+  /* The trend line draws itself; dots pop in as it passes. */
+  .chart-draw {
+    stroke-dasharray: 1;
+    animation: chart-draw 900ms var(--ease-soft) 150ms both;
+  }
+  .chart-dot {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: dot-pop 340ms var(--ease-soft) both;
+    animation-delay: calc(500ms + var(--i, 0) * 90ms);
+  }
+
+  /* The coverage ring draws to its value. */
+  .ring-draw {
+    animation: ring-draw 800ms var(--ease-soft) 100ms both;
+  }
+
+  /* One attention pulse on the mark just jumped to. */
+  mark[data-active] {
+    animation: mark-pulse 1100ms var(--ease-soft) 1;
+  }
+
+  /* The scanning sheet: a green read line sweeping the page. */
+  .scan-line {
+    animation: scan-sweep 1900ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  }
+
+  /* Landing demo: flagged spans get marked one by one. */
+  .demo-mark {
+    animation: demo-mark-in 500ms ease-out both;
+    animation-delay: calc(700ms + var(--i, 0) * 480ms);
+  }
+
+  /* Row actions stay quiet until the row is hovered or focused. */
+  .row-actions {
+    opacity: 0;
+    transition: opacity 120ms ease-out;
+  }
+  .group:hover .row-actions,
+  .group:focus-within .row-actions {
+    opacity: 1;
+  }
+  @media (hover: none) {
+    .row-actions {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 9px;
+  }
+}
+@keyframes bar-fill {
+  from {
+    scale: 0 1;
+  }
+}
+@keyframes chart-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dot-pop {
+  from {
+    scale: 0;
+  }
+}
+@keyframes ring-draw {
+  from {
+    stroke-dashoffset: var(--ring-c);
+  }
+}
+@keyframes mark-pulse {
+  from {
+    outline: 2px solid var(--mark-c);
+    outline-offset: 3px;
+  }
+  to {
+    outline: 2px solid transparent;
+    outline-offset: 1px;
+  }
+}
+@keyframes scan-sweep {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(84px);
+  }
+}
+@keyframes demo-mark-in {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+/* Anything that moves, stops moving on request. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* The report route prints as a plain document. */
+@media print {
+  body {
+    background: #fff !important;
+    color: #1c1b16;
+  }
+  .sheet {
+    border: none !important;
+  }
+}

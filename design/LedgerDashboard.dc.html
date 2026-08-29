@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #f6f8fa; }
+    a { color: #175cd3; } a:hover { color: #0f3f96; }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #f6f8fa; color: #182230; font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;">
+
+  <div style="display: flex; align-items: center; gap: 24px; height: 56px; background: #101828; padding: 0 24px;">
+    <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: #ffffff;">PROOF</div>
+    <div style="display: flex; gap: 4px; font-size: 13px;">
+      <div style="background: rgba(255,255,255,0.12); color: #ffffff; border-radius: 6px; padding: 7px 12px; font-weight: 500;">Resumes</div>
+      <div style="color: #98a2b3; padding: 7px 12px;">History</div>
+      <div style="color: #98a2b3; padding: 7px 12px;">Account</div>
+    </div>
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 10.5px; color: #98a2b3;">AI OFF</div>
+      <div style="width: 28px; height: 28px; border-radius: 999px; background: rgba(255,255,255,0.14); display: grid; place-items: center; font-size: 11px; font-weight: 600; color: #ffffff;">JM</div>
+    </div>
+  </div>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 32px 24px;">
+
+    <div style="display: flex; align-items: flex-end; gap: 24px; margin-bottom: 16px;">
+      <div style="flex: 1;">
+        <div style="font-size: 21px; font-weight: 600; letter-spacing: -0.01em;">Hello, Jane</div>
+        <div style="font-size: 13px; color: #5d6b7e; margin-top: 4px;">Two reviews on record. The revision picked up 17.7 points.</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px;">
+      <div style="background: #ffffff; border: 1px solid #e4e9ef; border-radius: 10px; box-shadow: 0 1px 2px rgba(16,24,40,0.05); padding: 16px 18px;">
+        <div style="font-size: 12px; font-weight: 500; color: #5d6b7e;">Reviews</div>
+        <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 24px; font-weight: 600; margin-top: 4px;">2</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e9ef; border-radius: 10px; box-shadow: 0 1px 2px rgba(16,24,40,0.05); padding: 16px 18px;">
+        <div style="font-size: 12px; font-weight: 500; color: #5d6b7e;">Latest score</div>
+        <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 24px; font-weight: 600; margin-top: 4px; color: #067647;">95.5</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e9ef; border-radius: 10px; box-shadow: 0 1px 2px rgba(16,24,40,0.05); padding: 16px 18px;">
+        <div style="font-size: 12px; font-weight: 500; color: #5d6b7e;">Best score</div>
+        <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 24px; font-weight: 600; margin-top: 4px;">95.5</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e9ef; border-radius: 10px; box-shadow: 0 1px 2px rgba(16,24,40,0.05); padding: 16px 18px;">
+        <div style="font-size: 12px; font-weight: 500; color: #5d6b7e;">Since last review</div>
+        <div style="display: inline-flex; align-items: center; gap: 6px; margin-top: 7px; background: #ecfdf3; color: #067647; border-radius: 999px; padding: 3px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600;">+17.7</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 20px;">
+
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="background: #ffffff; border: 1px solid #e4e9ef; border-radius: 10px; box-shadow: 0 1px 2px rgba(16,24,40,0.05); overflow: hidden;">
+          <div style="display: flex; align-items: center; padding: 14px 18px; border-bottom: 1px solid #eef2f6;">
+            <span style="font-size: 13.5px; font-weight: 600;">Score over time</span>
+            <span style="margin-left: auto; font-size: 12px; color: #98a2b3;">Click a point to open its review</span>
+          </div>
+          <svg width="740" height="190" viewBox="0 0 740 190" style="display: block; padding: 6px 0;">
+            <line x1="46" y1="24" x2="716" y2="24" stroke="#eef2f6" stroke-width="1"></line>
+            <line x1="46" y1="88" x2="716" y2="88" stroke="#eef2f6" stroke-width="1"></line>
+            <line x1="46" y1="152" x2="716" y2="152" stroke="#eef2f6" stroke-width="1"></line>
+            <text x="36" y="28" text-anchor="end" font-size="10" fill="#98a2b3" font-family="IBM Plex Mono, monospace">100</text>
+            <text x="36" y="92" text-anchor="end" font-size="10" fill="#98a2b3" font-family="IBM Plex Mono, monospace">50</text>
+            <text x="36" y="156" text-anchor="end" font-size="10" fill="#98a2b3" font-family="IBM Plex Mono, monospace">0</text>
+            <path d="M140 52.4 L620 29.8" stroke="#98a2b3" stroke-width="2" fill="none" stroke-linecap="round"></path>
+            <circle cx="140" cy="52.4" r="4.5" fill="#ffffff" stroke="#98a2b3" stroke-width="1.5"></circle>
+            <circle cx="620" cy="29.8" r="5.5" fill="#067647"></circle>
+            <text x="140" y="74" text-anchor="middle" font-size="11" fill="#5d6b7e" font-family="IBM Plex Mono, monospace">77.8</text>
+            <text x="620" y="18" text-anchor="middle" font-size="11" fill="#182230" font-family="IBM Plex Mono, monospace" font-weight="600">95.5</text>
+            <text x="140" y="176" text-anchor="middle" font-size="10" fill="#98a2b3" font-family="IBM Plex Mono, monospace">Aug 28</text>
+            <text x="620" y="176" text-anchor="middle" font-size="10" fill="#98a2b3" font-family="IBM Plex Mono, monospace">Aug 28</text>
+          </svg>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e4e9ef; border-radius: 10px; box-shadow: 0 1px 2px rgba(16,24,40,0.05); overflow: hidden;">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid #eef2f6;">
+            <span style="font-size: 13.5px; font-weight: 600;">Your resumes</span>
+            <span style="background: #eef2f6; color: #5d6b7e; border-radius: 999px; padding: 1px 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600;">2</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px; padding: 13px 18px; border-bottom: 1px solid #eef2f6;">
+            <span style="width: 34px; height: 34px; border-radius: 8px; background: #f2f5f8; display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M9.5 1.5 H4 A1 1 0 0 0 3 2.5 V13.5 A1 1 0 0 0 4 14.5 H12 A1 1 0 0 0 13 13.5 V5 Z M9.5 1.5 V5 H13" stroke="#5d6b7e" stroke-width="1.4" fill="none" stroke-linejoin="round"></path></svg></span>
+            <div style="flex: 1;">
+              <div style="font-size: 13.5px; font-weight: 600;">resume-v2.txt</div>
+              <div style="font-size: 12px; color: #98a2b3; margin-top: 2px;">Aug 28, 2026 &#183; 231 words &#183; 1 page &#183; 1 review</div>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 16px; font-weight: 600; color: #067647;">95.5</span>
+            <div style="background: #ffffff; border: 1px solid #d6dde6; border-radius: 8px; padding: 8px 13px; font-size: 12.5px; font-weight: 600; box-shadow: 0 1px 2px rgba(16,24,40,0.05);">Review</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px; padding: 13px 18px;">
+            <span style="width: 34px; height: 34px; border-radius: 8px; background: #f2f5f8; display: grid; place-items: center;"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M9.5 1.5 H4 A1 1 0 0 0 3 2.5 V13.5 A1 1 0 0 0 4 14.5 H12 A1 1 0 0 0 13 13.5 V5 Z M9.5 1.5 V5 H13" stroke="#5d6b7e" stroke-width="1.4" fill="none" stroke-linejoin="round"></path></svg></span>
+            <div style="flex: 1;">
+              <div style="font-size: 13.5px; font-weight: 600;">resume-v1.txt</div>
+              <div style="font-size: 12px; color: #98a2b3; margin-top: 2px;">Aug 28, 2026 &#183; 169 words &#183; 1 page &#183; 1 review</div>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 16px; font-weight: 600; color: #b54708;">77.8</span>
+            <div style="background: #ffffff; border: 1px solid #d6dde6; border-radius: 8px; padding: 8px 13px; font-size: 12.5px; font-weight: 600; box-shadow: 0 1px 2px rgba(16,24,40,0.05);">Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border: 1.5px dashed #c6ced8; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 32px; text-align: center;">
+        <span style="width: 40px; height: 40px; border-radius: 10px; background: #f2f5f8; display: grid; place-items: center;"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 13.5 V4 M6 8 L10 4 L14 8 M4 16.5 H16" stroke="#5d6b7e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg></span>
+        <div style="font-size: 15px; font-weight: 600;">Drop a resume to screen it</div>
+        <div style="font-size: 12.5px; color: #5d6b7e; max-width: 280px; line-height: 1.5;">PDF, DOCX or TXT up to 5 MB. Read as plain text &#8212; exactly what a screening system sees.</div>
+        <div style="background: #101828; color: #ffffff; border-radius: 8px; padding: 10px 18px; font-size: 12.5px; font-weight: 600; margin-top: 8px; box-shadow: 0 1px 2px rgba(16,24,40,0.05);">Choose a file</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

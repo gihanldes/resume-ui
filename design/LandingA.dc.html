@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;family=Spline+Sans+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #fbfaf7; }
+    a { color: #2a5d46; text-decoration: none; }
+    a:hover { color: #1f4936; text-decoration: underline; }
+    @keyframes markin { 0% { background-color: transparent; box-shadow: none; } 12% { } 88% { } 100% { } }
+    .markin { animation: markin 5200ms ease-out infinite; }
+    @keyframes notein { 0%, 8% { opacity: 0; transform: translateX(6px); } 16%, 90% { opacity: 1; transform: translateX(0); } 100% { opacity: 0; } }
+    .notein { animation: notein 5200ms cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+    @keyframes sweep { from { transform: translateY(0); } to { transform: translateY(560px); } }
+    .sweep { animation: sweep 2600ms cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0.01ms !important; animation-iteration-count: 1 !important; } }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 1080px; overflow: hidden; background: #fbfaf7; color: #1c1b16; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; position: relative;">
+
+  <!-- Nav -->
+  <div style="border-bottom: 1px solid #e7e4db;">
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; align-items: center; height: 62px; padding: 0 40px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">Proof<span style="color: #2a5d46;">.</span></div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 500;">
+        <span style="color: #2a5d46;">Sign in</span>
+        <span style="background: #2a5d46; color: #fbfaf7; border-radius: 6px; padding: 9px 16px; font-weight: 600;">Create an account</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 0 auto; padding: 72px 40px 0 40px; display: flex; gap: 56px;">
+
+    <!-- Left: the pitch -->
+    <div style="width: 420px; flex-shrink: 0; padding-top: 36px;">
+      <h1 style="font-size: 46px; line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; margin: 0;">Your resume is read by software first.</h1>
+      <p style="font-size: 17px; line-height: 1.55; color: #6f6c62; margin: 22px 0 0 0; max-width: 380px;">Proof shows you the exact plain text a screening system parses, marks every span that costs you points, and prices each fix.</p>
+      <div style="display: flex; align-items: center; gap: 22px; margin-top: 32px;">
+        <span style="background: #2a5d46; color: #fbfaf7; border-radius: 6px; padding: 13px 22px; font-size: 15px; font-weight: 600;">Screen my resume</span>
+        <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Sign in</span>
+      </div>
+      <div style="font-size: 13px; color: #a3a095; margin-top: 22px;">PDF, DOCX or TXT &#183; deterministic score &#183; AI rewrites optional</div>
+
+      <div style="border-top: 1px solid #1c1b16; margin-top: 56px; padding-top: 20px; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: #6f6c62;">
+        <div><span style="font-family: 'Spline Sans Mono', monospace; font-weight: 600; color: #1c1b16;">6</span> categories, each with a 100-point budget</div>
+        <div><span style="font-family: 'Spline Sans Mono', monospace; font-weight: 600; color: #1c1b16;">0</span> invented numbers: the AI leaves [X%] where yours belongs</div>
+        <div><span style="font-family: 'Spline Sans Mono', monospace; font-weight: 600; color: #1c1b16;">1</span> click to re-run after every revision</div>
+      </div>
+    </div>
+
+    <!-- Right: the marked-up sheet, oversized, bleeding off the fold -->
+    <div style="flex: 1; position: relative;">
+      <div style="position: relative; background: #ffffff; border: 1px solid #e7e4db; border-radius: 6px; box-shadow: 0 18px 50px rgba(28, 27, 22, 0.10); padding: 34px 38px; width: 600px; min-height: 900px; overflow: hidden;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #efece3; padding-bottom: 14px;">
+          <span style="font-size: 13px; font-weight: 600;">resume-v1.txt</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 11.5px; color: #a3a095;">as a screening system reads it</span>
+        </div>
+        <div style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; line-height: 27px; margin-top: 18px; color: #1c1b16;">
+          <div><span style="color: #b9b6aa; font-size: 11px;">01</span>&nbsp;&nbsp;ANJALI PERERA</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">02</span>&nbsp;&nbsp;anjali.perera@gmail.com &#183; Colombo</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">03</span>&nbsp;&nbsp;</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">04</span>&nbsp;&nbsp;SUMMARY</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">05</span>&nbsp;&nbsp;I am a <span class="markin" style="background: rgba(156, 107, 16, 0.14); box-shadow: inset 0 -2px 0 0 #9c6b10; border-radius: 2px;">hard working team player</span> with a</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">06</span>&nbsp;&nbsp;<span class="markin" style="background: rgba(156, 107, 16, 0.14); box-shadow: inset 0 -2px 0 0 #9c6b10; border-radius: 2px;">proven track record</span> of success.</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">07</span>&nbsp;&nbsp;</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">08</span>&nbsp;&nbsp;EXPERIENCE</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">09</span>&nbsp;&nbsp;Senior Engineer, Nortal (2021 to now)</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">10</span>&nbsp;&nbsp;&#8226; <span class="markin" style="background: rgba(179, 55, 43, 0.13); box-shadow: inset 0 -2px 0 0 #b3372b; border-radius: 2px;">Responsible for</span> the payouts pipeline</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">11</span>&nbsp;&nbsp;&#8226; Led migration, <span class="markin" style="background: rgba(42, 93, 70, 0.13); box-shadow: inset 0 -2px 0 0 #2a5d46; border-radius: 2px;">cutting p99 by 43%</span></div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">12</span>&nbsp;&nbsp;&#8226; <span class="markin" style="background: rgba(179, 55, 43, 0.13); box-shadow: inset 0 -2px 0 0 #b3372b; border-radius: 2px;">Worked on</span> various internal tools</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">13</span>&nbsp;&nbsp;</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">14</span>&nbsp;&nbsp;SKILLS</div>
+          <div><span style="color: #b9b6aa; font-size: 11px;">15</span>&nbsp;&nbsp;Python, Go, Kubernetes, Postgres</div>
+        </div>
+        <!-- scoreboard band on the sheet -->
+        <div style="border-top: 1px solid #1c1b16; margin-top: 22px; padding-top: 16px; display: flex; align-items: baseline; gap: 10px;">
+          <span style="font-size: 46px; font-weight: 800; letter-spacing: -0.03em; line-height: 0.9; color: #9c6b10; font-variant-numeric: tabular-nums;">77.8</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; color: #a3a095;">/100</span>
+          <span style="font-size: 14px; font-weight: 700; margin-left: 10px;">A few clear fixes remain.</span>
+        </div>
+        <div style="display: flex; gap: 26px; margin-top: 14px; font-size: 12.5px; color: #6f6c62;">
+          <span>Impact <span style="font-family: 'Spline Sans Mono', monospace; font-weight: 600; color: #b3372b;">49</span></span>
+          <span>Formatting <span style="font-family: 'Spline Sans Mono', monospace; font-weight: 600; color: #9c6b10;">64</span></span>
+          <span>Structure <span style="font-family: 'Spline Sans Mono', monospace; font-weight: 500; color: #1c1b16;">95</span></span>
+          <span>ATS <span style="font-family: 'Spline Sans Mono', monospace; font-weight: 500; color: #1c1b16;">100</span></span>
+        </div>
+        <!-- scan line -->
+        <g></g>
+        <div class="sweep" style="position: absolute; left: 0; right: 0; top: 84px; pointer-events: none;">
+          <div style="height: 20px; background: rgba(42, 93, 70, 0.06);"></div>
+          <div style="height: 2px; background: #2a5d46;"></div>
+        </div>
+      </div>
+
+      <!-- margin annotations, connected to the marks -->
+      <div class="notein" style="position: absolute; left: 640px; top: 154px; width: 200px; animation-delay: 400ms;">
+        <div style="border-top: 1.5px solid #9c6b10; width: 34px;"></div>
+        <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; color: #9c6b10; margin-top: 6px; line-height: 1.5;">! unsupported claim<br><span style="color: #6f6c62;">every candidate writes this</span></div>
+      </div>
+      <div class="notein" style="position: absolute; left: 640px; top: 290px; width: 200px; animation-delay: 1100ms;">
+        <div style="border-top: 1.5px solid #b3372b; width: 34px;"></div>
+        <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; color: #b3372b; margin-top: 6px; line-height: 1.5;">&#215; weak opener<br><span style="color: #6f6c62;">describes a job, not you</span></div>
+      </div>
+      <div class="notein" style="position: absolute; left: 640px; top: 372px; width: 200px; animation-delay: 1800ms;">
+        <div style="border-top: 1.5px solid #2a5d46; width: 34px;"></div>
+        <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; color: #2a5d46; margin-top: 6px; line-height: 1.5;">&#10003; quantified<br><span style="color: #6f6c62;">this is what passes</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

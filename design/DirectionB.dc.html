@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #eef1f5; }
+    a { color: #2b6cb0; } a:hover { color: #1d4e82; }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #eef1f5; color: #1a2530; font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;">
+
+  <!-- Toolbar -->
+  <div style="display: flex; align-items: center; gap: 28px; height: 48px; background: #16202b; color: #e8edf3; padding: 0 24px;">
+    <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.14em;">PROOF</div>
+    <div style="display: flex; gap: 4px; font-size: 12.5px; align-self: stretch;">
+      <div style="display: flex; align-items: center; padding: 0 14px; border-bottom: 2px solid #4f8fd0;">Resumes</div>
+      <div style="display: flex; align-items: center; padding: 0 14px; color: #93a3b5;">History</div>
+      <div style="display: flex; align-items: center; padding: 0 14px; color: #93a3b5;">Account</div>
+    </div>
+    <div style="margin-left: auto; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #93a3b5;">jane@example.com</div>
+  </div>
+
+  <!-- Context strip -->
+  <div style="display: flex; align-items: center; gap: 18px; background: #ffffff; border-bottom: 1px solid #d7dde5; padding: 12px 24px;">
+    <div style="font-size: 14px; font-weight: 600;">resume-v1.txt</div>
+    <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11.5px; color: #5c6b7a;">REV 2026-08-28 03:28:00 &nbsp;&#183;&nbsp; ENGINE 1.0 &nbsp;&#183;&nbsp; 6 MS &nbsp;&#183;&nbsp; TARGET: SENIOR BACKEND ENGINEER</div>
+    <div style="margin-left: auto; display: flex; gap: 8px;">
+      <div style="border: 1px solid #c3ccd6; padding: 10px 16px; font-size: 12.5px; font-weight: 500;">Export report</div>
+      <div style="background: #16202b; color: #ffffff; padding: 11px 16px; font-size: 12.5px; font-weight: 500;">Re-run</div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 360px 1fr; gap: 16px; padding: 16px 24px 28px 24px;">
+
+    <!-- Left: score module -->
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="background: #ffffff; border: 1px solid #d7dde5; padding: 20px;">
+        <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5c6b7a;">Overall score</div>
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-top: 8px;">
+          <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 54px; font-weight: 600; line-height: 1;">77.8</span>
+          <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 14px; color: #5c6b7a;">/100</span>
+        </div>
+        <div style="display: flex; gap: 3px; margin-top: 14px;">
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #a06a00;"></div>
+          <div style="height: 8px; flex: 1; background: #d9c69a;"></div>
+          <div style="height: 8px; flex: 1; background: #e3e8ee;"></div>
+          <div style="height: 8px; flex: 1; background: #e3e8ee;"></div>
+        </div>
+        <div style="font-size: 12px; color: #a06a00; font-weight: 600; margin-top: 10px; letter-spacing: 0.04em;">GOOD &#8212; A FEW CLEAR FIXES REMAIN</div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #d7dde5; padding: 20px;">
+        <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5c6b7a;">Categories</div>
+        <div style="display: flex; flex-direction: column; margin-top: 8px;">
+          <div style="display: flex; align-items: center; gap: 10px; height: 34px; border-bottom: 1px solid #e8edf3;">
+            <span style="font-size: 13px; flex: 1;">Contact &amp; Header</span>
+            <span style="width: 64px; height: 6px; background: #e3e8ee;"><span style="display: block; width: 100%; height: 6px; background: #1e7d4f;"></span></span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; width: 38px; text-align: right;">100</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; height: 34px; border-bottom: 1px solid #e8edf3;">
+            <span style="font-size: 13px; flex: 1;">Structure &amp; Sections</span>
+            <span style="width: 64px; height: 6px; background: #e3e8ee;"><span style="display: block; width: 95%; height: 6px; background: #1e7d4f;"></span></span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; width: 38px; text-align: right;">95</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; height: 34px; border-bottom: 1px solid #e8edf3;">
+            <span style="font-size: 13px; flex: 1;">Impact &amp; Writing</span>
+            <span style="width: 64px; height: 6px; background: #e3e8ee;"><span style="display: block; width: 49%; height: 6px; background: #c23934;"></span></span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; width: 38px; text-align: right; color: #c23934;">49</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; height: 34px; border-bottom: 1px solid #e8edf3;">
+            <span style="font-size: 13px; flex: 1;">ATS Compatibility</span>
+            <span style="width: 64px; height: 6px; background: #e3e8ee;"><span style="display: block; width: 100%; height: 6px; background: #1e7d4f;"></span></span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; width: 38px; text-align: right;">100</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; height: 34px; border-bottom: 1px solid #e8edf3;">
+            <span style="font-size: 13px; flex: 1;">Formatting &amp; Length</span>
+            <span style="width: 64px; height: 6px; background: #e3e8ee;"><span style="display: block; width: 64%; height: 6px; background: #a06a00;"></span></span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; width: 38px; text-align: right; color: #a06a00;">64</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; height: 34px;">
+            <span style="font-size: 13px; flex: 1; color: #8794a3;">Job Match</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3;">N/A &#8212; NO POSTING</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #d7dde5; padding: 20px;">
+        <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5c6b7a;">Parsed record</div>
+        <div style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12px; line-height: 1.95; margin-top: 8px;">
+          <div><span style="color: #8794a3;">NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>JANE MARTINEZ</div>
+          <div><span style="color: #8794a3;">EMAIL&nbsp;&nbsp;&nbsp;&nbsp;</span>jane.martinez@example.com</div>
+          <div><span style="color: #8794a3;">PHONE&nbsp;&nbsp;&nbsp;&nbsp;</span>(415) 555-0142</div>
+          <div><span style="color: #8794a3;">TENURE&nbsp;&nbsp;&nbsp;</span>8.1 YRS</div>
+          <div><span style="color: #8794a3;">LENGTH&nbsp;&nbsp;&nbsp;</span>169 WORDS / 1 PAGE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <div style="background: #ffffff; border: 1px solid #d7dde5;">
+        <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid #d7dde5;">
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5c6b7a;">Findings &#8212; 10</div>
+          <div style="display: flex; gap: 12px; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 10.5px; color: #5c6b7a;">
+            <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: #c23934;"></span>CRIT 2</span>
+            <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: #a06a00;"></span>WARN 2</span>
+            <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: #2b6cb0;"></span>SUGG 2</span>
+            <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; background: #1e7d4f;"></span>PASS 4</span>
+          </div>
+          <div style="margin-left: auto; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 10.5px; color: #5c6b7a;">SORTED BY &#8722;PTS</div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 16px; border-bottom: 1px solid #e8edf3;">
+            <span style="width: 9px; height: 9px; background: #c23934; flex-shrink: 0;"></span>
+            <span style="font-size: 13px; font-weight: 500; flex: 1;">Only 169 words of content</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3; width: 150px;">FORMATTING</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; color: #c23934; width: 48px; text-align: right;">-30.0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 16px; border-bottom: 1px solid #e8edf3;">
+            <span style="width: 9px; height: 9px; background: #c23934; flex-shrink: 0;"></span>
+            <span style="font-size: 13px; font-weight: 500; flex: 1;">3 bullets open with a weak verb</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3; width: 150px;">IMPACT</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; color: #c23934; width: 48px; text-align: right;">-21.0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 16px; border-bottom: 1px solid #e8edf3;">
+            <span style="width: 9px; height: 9px; background: #a06a00; flex-shrink: 0;"></span>
+            <span style="font-size: 13px; font-weight: 500; flex: 1;">4 unsupported self-descriptions</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3; width: 150px;">IMPACT</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; color: #a06a00; width: 48px; text-align: right;">-16.0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 16px; border-bottom: 1px solid #e8edf3;">
+            <span style="width: 9px; height: 9px; background: #a06a00; flex-shrink: 0;"></span>
+            <span style="font-size: 13px; font-weight: 500; flex: 1;">5 filler phrases found</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3; width: 150px;">IMPACT</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; color: #a06a00; width: 48px; text-align: right;">-14.0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 16px; border-bottom: 1px solid #e8edf3;">
+            <span style="width: 9px; height: 9px; background: #2b6cb0; flex-shrink: 0;"></span>
+            <span style="font-size: 13px; font-weight: 500; flex: 1;">Date formats are inconsistent</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3; width: 150px;">FORMATTING</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; color: #5c6b7a; width: 48px; text-align: right;">-6.0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: 40px; padding: 0 16px;">
+            <span style="width: 9px; height: 9px; background: #1e7d4f; flex-shrink: 0;"></span>
+            <span style="font-size: 13px; font-weight: 500; flex: 1;">71% of bullets are quantified</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 11px; color: #8794a3; width: 150px;">IMPACT</span>
+            <span style="font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; color: #1e7d4f; width: 48px; text-align: right;">PASS</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #d7dde5;">
+        <div style="display: flex; align-items: center; padding: 12px 16px; border-bottom: 1px solid #d7dde5;">
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5c6b7a;">Source &#8212; as parsed</div>
+          <div style="margin-left: auto; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 10.5px; color: #5c6b7a;">11 SPANS FLAGGED</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 34px 1fr; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 12.5px; line-height: 24px; padding: 14px 16px;">
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">05</div><div style="font-weight: 600;">PROFESSIONAL SUMMARY</div>
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">06</div><div>Backend engineer with 6 years. I am a <span style="background: rgba(160,106,0,0.16); box-shadow: inset 0 -2px 0 #a06a00;">hard working team player</span> with a</div>
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">07</div><div><span style="background: rgba(160,106,0,0.16); box-shadow: inset 0 -2px 0 #a06a00;">proven track record</span> and <span style="background: rgba(160,106,0,0.16); box-shadow: inset 0 -2px 0 #a06a00;">excellent communication skills</span>.</div>
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">12</div><div>&#8226; Led ledger migration to PostgreSQL, <span style="background: rgba(30,125,79,0.14); box-shadow: inset 0 -2px 0 #1e7d4f;">cutting p99 latency by 43%</span></div>
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">13</div><div>&#8226; <span style="background: rgba(194,57,52,0.14); box-shadow: inset 0 -2px 0 #c23934;">Responsible for</span> the payouts pipeline processing $2.1B annually</div>
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">14</div><div>&#8226; <span style="background: rgba(194,57,52,0.14); box-shadow: inset 0 -2px 0 #c23934;">Worked on</span> various tasks related to reconciliation</div>
+          <div style="color: #b3bdc9; text-align: right; padding-right: 12px;">20</div><div>&#8226; <span style="background: rgba(194,57,52,0.14); box-shadow: inset 0 -2px 0 #c23934;">Participated in</span> code reviews and sprint planning</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

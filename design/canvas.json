@@ -1,0 +1,156 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Green ink \u00b7 the app"
+    },
+    {
+      "id": "page-2",
+      "name": "Earlier directions"
+    },
+    {
+      "id": "page-3",
+      "name": "Landing directions"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 2120,
+      "title": "Review",
+      "page": "page-1"
+    },
+    {
+      "file": "Dashboard.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 1280,
+      "title": "Home",
+      "page": "page-1"
+    },
+    {
+      "file": "Motion.dc.html",
+      "x": 1560,
+      "y": 1400,
+      "w": 1440,
+      "h": 1120,
+      "title": "Motion",
+      "page": "page-1"
+    },
+    {
+      "file": "ResumeDetail.dc.html",
+      "x": 0,
+      "y": 2240,
+      "w": 1440,
+      "h": 1150,
+      "title": "Resume detail",
+      "page": "page-1"
+    },
+    {
+      "file": "LedgerDashboard.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 760,
+      "title": "B \u00b7 Ledger (superseded)",
+      "page": "page-2"
+    },
+    {
+      "file": "LedgerLanding.dc.html",
+      "x": 0,
+      "y": 900,
+      "w": 1440,
+      "h": 770,
+      "title": "B \u00b7 Ledger \u00b7 Landing (superseded)",
+      "page": "page-2"
+    },
+    {
+      "file": "DirectionA.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 1880,
+      "title": "A \u00b7 Galley",
+      "page": "page-2"
+    },
+    {
+      "file": "GalleyDashboard.dc.html",
+      "x": 1560,
+      "y": 2020,
+      "w": 1440,
+      "h": 900,
+      "title": "A \u00b7 Galley \u00b7 Dashboard",
+      "page": "page-2"
+    },
+    {
+      "file": "DirectionC.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 1360,
+      "title": "C \u00b7 Studio",
+      "page": "page-2"
+    },
+    {
+      "file": "LandingA.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1080,
+      "title": "A \u00b7 Proof desk",
+      "page": "page-3"
+    },
+    {
+      "file": "LandingB.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 1020,
+      "title": "B \u00b7 Poster proof",
+      "page": "page-3"
+    },
+    {
+      "file": "LandingC.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 1040,
+      "title": "C \u00b7 Night shift",
+      "page": "page-3"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-chosen",
+      "x": 0,
+      "y": -210,
+      "w": 500,
+      "page": "page-1",
+      "text": "Green ink: the settled system.\n\nOne surface, no card grid: structure comes from hairline rules and a real type scale (Schibsted Grotesk + Spline Sans Mono). One brand color, pine green, because Proof means approval; it does actions, links and 'pass'. Severity is colored glyphs and numerals, never pills. The score is the page's focal point.\n\nMotion: the score counts up, category bars fill, rows rise, and the run state shows a scanning sheet. The Motion board holds the timings.\n\nImplemented in the app code."
+    },
+    {
+      "id": "note-earlier",
+      "x": 0,
+      "y": -210,
+      "w": 460,
+      "page": "page-2",
+      "text": "Earlier directions, kept for the record: A \u00b7 Galley (paper/red-pen), B \u00b7 Ledger (instrument, two polish passes), C \u00b7 Studio (poster). All superseded by Green ink."
+    },
+    {
+      "id": "note-landing",
+      "x": 0,
+      "y": -260,
+      "w": 560,
+      "page": "page-3",
+      "text": "Three landing directions, all inside Green ink. Pick one or mix.\n\nA \u00b7 Proof desk: the product is the hero. An oversized marked-up sheet with margin notes and the score printed on it. Most informative; also the densest.\n\nB \u00b7 Poster proof: pure typography. A weak resume line struck in red becomes a strong one in green, at poster scale. Boldest and instantly understood; shows no UI.\n\nC \u00b7 Night shift: dark ground, one lit sheet under a green scan line. Highest drama and contrast; the landing flips brightness against the light app."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+.venv/
+__pycache__/
+.DS_Store
+*.log
+nohup.out
+.env
+*.db
+*.sqlite3
+.idea/
+
+# regenerated from design/*.dc.html + canvas.json
+design/proof-redesign.html
+scripts/deploy.sh
+.claude/
+.superpowers/
+docs/superpowers/

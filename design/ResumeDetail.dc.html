@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;family=Spline+Sans+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #fbfaf7; }
+    a { color: #2a5d46; text-decoration: none; }
+    a:hover { color: #1f4936; text-decoration: underline; }
+    @keyframes rise { from { opacity: 0; transform: translateY(9px); } }
+    .rise { animation: rise 480ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0.01ms !important; animation-iteration-count: 1 !important; } }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #fbfaf7; color: #1c1b16; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;">
+
+  <!-- Nav: Resumes active -->
+  <div style="border-bottom: 1px solid #e7e4db;">
+    <div style="max-width: 984px; margin: 0 auto; display: flex; align-items: center; gap: 32px; height: 60px; padding: 0 32px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">Proof<span style="color: #2a5d46;">.</span></div>
+      <div style="display: flex; gap: 24px; font-size: 14px; font-weight: 500; align-self: stretch; align-items: stretch;">
+        <span style="display: flex; align-items: center; color: #6f6c62;">Home</span>
+        <span style="display: flex; align-items: center; border-bottom: 2px solid #2a5d46; margin-bottom: -1px;">Resumes</span>
+        <span style="display: flex; align-items: center; color: #6f6c62;">History</span>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 999px; background: #2a5d46; color: #fbfaf7; font-size: 12.5px; font-weight: 700; letter-spacing: 0.04em;">JA</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 984px; margin: 0 auto; padding: 32px 32px 0 32px;">
+
+    <div style="font-size: 13px; color: #6f6c62;">Back to <span style="color: #2a5d46; font-weight: 500;">resumes</span></div>
+
+    <!-- Header: filename, meta, actions -->
+    <div style="display: flex; align-items: flex-end; gap: 32px; margin-top: 12px;">
+      <div style="flex: 1;">
+        <div style="font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1;">resume-v1.txt</div>
+        <div style="font-family: 'Spline Sans Mono', monospace; font-size: 12px; color: #6f6c62; margin-top: 6px;">167 words &#183; 1 page(s) &#183; uploaded 8/29/2026</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Rename</span>
+        <span style="font-size: 14px; color: #b3372b;">Delete</span>
+      </div>
+    </div>
+    <div style="font-size: 12px; color: #a3a095; margin-top: 6px;">Rename swaps the title for an input in place: Enter saves, Esc cancels.</div>
+
+    <!-- Setup panel, open -->
+    <div class="rise" style="border-top: 1px solid #1c1b16; margin-top: 26px; padding-top: 22px;">
+      <div style="font-size: 14px; color: #6f6c62; max-width: 560px; line-height: 1.5;">First review: it takes a few seconds, or about a minute with the AI critique on.</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 40px; margin-top: 18px;">
+        <div>
+          <div style="font-size: 13px; font-weight: 500; color: #6f6c62;">Target role</div>
+          <div style="border: 1px solid #d5d2c6; border-radius: 6px; background: rgba(255, 255, 255, 0.6); padding: 10px 12px; font-size: 14px; margin-top: 6px;">Senior Backend Engineer</div>
+          <div style="font-size: 12px; color: #6f6c62; margin-top: 6px;">Shapes the AI review's judgement of seniority and fit.</div>
+        </div>
+        <div></div>
+        <div>
+          <div style="font-size: 13px; font-weight: 500; color: #6f6c62;">Job description</div>
+          <div style="border: 1px solid #d5d2c6; border-radius: 6px; background: rgba(255, 255, 255, 0.6); padding: 10px 12px; font-size: 14px; color: #a3a095; margin-top: 6px; height: 120px;">Paste the full posting, including the requirements list.</div>
+        </div>
+        <div style="padding-top: 24px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <span style="width: 16px; height: 16px; border-radius: 3px; background: #2a5d46; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; color: #fbfaf7; font-size: 11px;">&#10003;</span>
+            <div>
+              <div style="font-size: 14px;">Include the AI review</div>
+              <div style="font-size: 12px; color: #6f6c62; margin-top: 2px; max-width: 320px;">Adds a written critique and rewritten bullets from gpt-5-mini. Adds up to a minute.</div>
+            </div>
+          </div>
+          <div style="margin-top: 22px;">
+            <span style="background: #2a5d46; color: #fbfaf7; border-radius: 6px; padding: 11px 18px; font-size: 14px; font-weight: 600;">Run the review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div style="margin-top: 32px; border-top: 1px solid #e7e4db; padding-top: 22px;">
+      <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Reviews</div>
+      <div style="margin-top: 6px;">
+        <div style="display: flex; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #efece3;">
+          <span style="flex: 1; font-size: 14px; color: #6f6c62;">8/29/2026, 9:12 PM &#183; Senior Backend Engineer &#183; AI review</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 12.5px; color: #2a5d46;">+4.2</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 14.5px; font-weight: 600; color: #9c6b10;">77.8</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">View</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #efece3;">
+          <span style="flex: 1; font-size: 14px; color: #6f6c62;">8/28/2026, 6:40 PM &#183; Senior Backend Engineer</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 12.5px; color: #b3372b;">-1.3</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 14.5px; font-weight: 600; color: #9c6b10;">73.6</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">View</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding: 12px 0;">
+          <span style="flex: 1; font-size: 14px; color: #6f6c62;">8/28/2026, 3:02 PM</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 14.5px; font-weight: 600; color: #9c6b10;">74.9</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">View</span>
+        </div>
+      </div>
+      <div style="font-size: 12px; color: #a3a095; margin-top: 8px;">View reveals on row hover; the delta compares each run to the one before it.</div>
+    </div>
+
+    <!-- Extracted text, collapsed -->
+    <div style="margin-top: 30px; border-top: 1px solid #e7e4db; padding-top: 22px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Extracted text</div>
+        <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Expand</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 40px; border-top: 1px solid #e7e4db; padding: 16px 0 28px 0; display: flex; align-items: baseline; gap: 32px; font-size: 12.5px; color: #a3a095;">
+      <span style="flex: 1;">Deterministic rule engine v1.2. Every deduction names the words that caused it.</span>
+      <span style="display: flex; gap: 20px;"><span>How it works</span><span>Terms</span><span>Privacy</span></span>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

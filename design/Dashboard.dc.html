@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;family=Spline+Sans+Mono:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #fbfaf7; }
+    a { color: #2a5d46; text-decoration: none; }
+    a:hover { color: #1f4936; text-decoration: underline; }
+    @keyframes rise { from { opacity: 0; transform: translateY(9px); } }
+    .rise { animation: rise 480ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+    @keyframes chartdraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    .draw { stroke-dasharray: 1; animation: chartdraw 900ms cubic-bezier(0.22, 1, 0.36, 1) 150ms both; }
+    @keyframes dotpop { from { opacity: 0; } }
+    .dot { animation: dotpop 340ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0.01ms !important; animation-iteration-count: 1 !important; } }
+  </style>
+</helmet>
+<div style="width: 1440px; background: #fbfaf7; color: #1c1b16; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;">
+
+  <!-- Nav: Home active, avatar on the right -->
+  <div style="border-bottom: 1px solid #e7e4db;">
+    <div style="max-width: 984px; margin: 0 auto; display: flex; align-items: center; gap: 32px; height: 60px; padding: 0 32px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">Proof<span style="color: #2a5d46;">.</span></div>
+      <div style="display: flex; gap: 24px; font-size: 14px; font-weight: 500; align-self: stretch; align-items: stretch;">
+        <span style="display: flex; align-items: center; border-bottom: 2px solid #2a5d46; margin-bottom: -1px;">Home</span>
+        <span style="display: flex; align-items: center; color: #6f6c62;">Resumes</span>
+        <span style="display: flex; align-items: center; color: #6f6c62;">History</span>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center;">
+        <span style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 999px; background: #2a5d46; color: #fbfaf7; font-size: 12.5px; font-weight: 700; letter-spacing: 0.04em;">JA</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 984px; margin: 0 auto; padding: 32px 32px 0 32px;">
+
+    <div style="font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1;">Hello, Jane</div>
+    <div style="font-size: 14px; color: #6f6c62; margin-top: 6px;">6 reviews across 2 resumes.</div>
+
+    <!-- Latest review band -->
+    <div style="border-top: 1px solid #1c1b16; border-bottom: 1px solid #e7e4db; margin-top: 20px; padding: 24px 0;">
+      <div style="display: flex; align-items: flex-end; gap: 40px;">
+        <div class="rise" style="display: flex; align-items: baseline; gap: 8px; flex-shrink: 0;">
+          <span style="font-size: 52px; font-weight: 800; letter-spacing: -0.03em; line-height: 0.9; color: #9c6b10;">77.8</span>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 14px; color: #a3a095;">/100</span>
+        </div>
+        <div class="rise" style="flex: 1; animation-delay: 60ms;">
+          <div style="font-size: 15px; font-weight: 700;">resume-v1.txt</div>
+          <div style="font-size: 13.5px; color: #6f6c62; margin-top: 2px;">Reviewed Aug 29, 2026 <span style="font-family: 'Spline Sans Mono', monospace; font-weight: 600; color: #2a5d46;">+4.2</span></div>
+        </div>
+        <div class="rise" style="display: flex; align-items: center; gap: 20px; animation-delay: 120ms;">
+          <span style="background: #2a5d46; color: #fbfaf7; border-radius: 6px; padding: 11px 18px; font-size: 14px; font-weight: 600;">Continue fixing</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Run new review</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fix these next -->
+    <div style="margin-top: 34px;">
+      <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Fix these next</div>
+      <div style="margin-top: 4px;">
+        <div class="rise" style="display: flex; gap: 20px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #efece3;">
+          <span style="font-size: 17px; font-weight: 700; color: #cfccc0; width: 20px; flex-shrink: 0;">1</span>
+          <div style="flex: 1; font-size: 14px;"><span style="font-weight: 600;">3 bullets open with a weak verb.</span> <span style="color: #6f6c62;">Start with a strong past-tense verb, for example: led.</span></div>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #6f6c62; flex-shrink: 0;">+5.2</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46; flex-shrink: 0;">Open</span>
+        </div>
+        <div class="rise" style="display: flex; gap: 20px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid #efece3; animation-delay: 60ms;">
+          <span style="font-size: 17px; font-weight: 700; color: #cfccc0; width: 20px; flex-shrink: 0;">2</span>
+          <div style="flex: 1; font-size: 14px;"><span style="font-weight: 600;">Only 167 words of content.</span> <span style="color: #6f6c62;">Add 3-5 achievement bullets per role.</span></div>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #6f6c62; flex-shrink: 0;">+4.5</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46; flex-shrink: 0;">Open</span>
+        </div>
+        <div class="rise" style="display: flex; gap: 20px; align-items: baseline; padding: 14px 0; animation-delay: 120ms;">
+          <span style="font-size: 17px; font-weight: 700; color: #cfccc0; width: 20px; flex-shrink: 0;">3</span>
+          <div style="flex: 1; font-size: 14px;"><span style="font-weight: 600;">4 unsupported self-descriptions.</span> <span style="color: #6f6c62;">Delete the claim; keep the achievement that demonstrates it.</span></div>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 13px; color: #6f6c62; flex-shrink: 0;">+4.0</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46; flex-shrink: 0;">Open</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Score over time -->
+    <div style="margin-top: 34px; border-top: 1px solid #e7e4db; padding-top: 22px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Score over time</div>
+        <div style="font-size: 13px; color: #6f6c62;">click a point to open its review</div>
+      </div>
+      <svg width="920" height="190" viewBox="0 0 920 190" fill="none" style="display: block; margin-top: 10px;">
+        <line x1="40" y1="150" x2="890" y2="150" stroke="#e7e4db"></line>
+        <line x1="40" y1="95" x2="890" y2="95" stroke="#e7e4db"></line>
+        <line x1="40" y1="40" x2="890" y2="40" stroke="#e7e4db"></line>
+        <text x="30" y="154" text-anchor="end" font-size="10" fill="#6f6c62" font-family="'Spline Sans Mono', monospace">0</text>
+        <text x="30" y="99" text-anchor="end" font-size="10" fill="#6f6c62" font-family="'Spline Sans Mono', monospace">50</text>
+        <text x="30" y="44" text-anchor="end" font-size="10" fill="#6f6c62" font-family="'Spline Sans Mono', monospace">100</text>
+        <path d="M70 112 L300 96 L540 100 L850 64" pathLength="1" class="draw" stroke="#6f6c62" stroke-width="1.5" fill="none"></path>
+        <circle cx="70" cy="112" r="3.5" fill="#fbfaf7" stroke="#6f6c62" stroke-width="1.5" class="dot" style="animation-delay: 500ms;"></circle>
+        <circle cx="300" cy="96" r="3.5" fill="#fbfaf7" stroke="#6f6c62" stroke-width="1.5" class="dot" style="animation-delay: 590ms;"></circle>
+        <circle cx="540" cy="100" r="3.5" fill="#fbfaf7" stroke="#6f6c62" stroke-width="1.5" class="dot" style="animation-delay: 680ms;"></circle>
+        <circle cx="850" cy="64" r="4.5" fill="#9c6b10" stroke="#6f6c62" stroke-width="1.5" class="dot" style="animation-delay: 770ms;"></circle>
+      </svg>
+    </div>
+
+    <!-- Your resumes -->
+    <div style="margin-top: 30px; border-top: 1px solid #e7e4db; padding-top: 22px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">Your resumes</div>
+        <span style="margin-left: auto; font-size: 14px; font-weight: 500; color: #2a5d46;">Upload a resume</span>
+      </div>
+      <div style="margin-top: 6px;">
+        <div style="display: flex; align-items: baseline; gap: 20px; padding: 12px 0; border-bottom: 1px solid #efece3;">
+          <div style="flex: 1;"><span style="font-size: 14.5px; font-weight: 600;">resume-v1.txt</span> <span style="font-size: 13px; color: #a3a095; margin-left: 10px;">4 reviews</span></div>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 14px; font-weight: 600; color: #9c6b10;">77.8</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Review</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; padding: 12px 0;">
+          <div style="flex: 1;"><span style="font-size: 14.5px; font-weight: 600;">resume-design-roles.pdf</span> <span style="font-size: 13px; color: #a3a095; margin-left: 10px;">2 reviews</span></div>
+          <span style="font-family: 'Spline Sans Mono', monospace; font-size: 14px; font-weight: 600; color: #2a5d46;">88.1</span>
+          <span style="font-size: 14px; font-weight: 500; color: #2a5d46;">Review</span>
+        </div>
+      </div>
+      <div style="font-size: 12px; color: #a3a095; margin-top: 8px;">Review and Delete reveal on row hover; always visible on touch.</div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 40px; border-top: 1px solid #e7e4db; padding: 16px 0 28px 0; display: flex; align-items: baseline; gap: 32px; font-size: 12.5px; color: #a3a095;">
+      <span style="flex: 1;">Deterministic rule engine v1.2. Every deduction names the words that caused it.</span>
+      <span style="display: flex; gap: 20px;"><span>How it works</span><span>Terms</span><span>Privacy</span></span>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

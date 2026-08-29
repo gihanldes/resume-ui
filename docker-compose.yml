@@ -1,0 +1,29 @@
+# Proof — resume review.
+#   cp .env.deploy.example .env   (fill in SECRET_KEY, optionally OPENAI_API_KEY)
+#   docker compose up --build
+# App at http://localhost:8080. The SQLite file lives in the proof-data volume.
+services:
+  api:
+    build: ./resume-backend/resume-backend
+    environment:
+      ENVIRONMENT: production
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env — python -c "import secrets; print(secrets.token_urlsafe(48))"}
+      DATABASE_URL: sqlite+aiosqlite:////data/resume_reviewer.db
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5-mini}
+      # Same-origin via the nginx proxy, so no cross-origin callers exist.
+      CORS_ORIGINS: http://localhost:8080
+    volumes:
+      - proof-data:/data
+    restart: unless-stopped
+
+  web:
+    build: ./resume-ui/resume-ui
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  proof-data:
