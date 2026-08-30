@@ -293,8 +293,6 @@ export function Home() {
         </section>
       )}
 
-      <p className="mt-9 text-[13px] text-ink-muted">This app was built for academic purposes.</p>
-
       <section className="mt-9 border-t border-ink-line pt-6" aria-label="Your resumes">
         <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
           <h2 className="section-title">Your resumes</h2>

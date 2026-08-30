@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useAuth } from './auth/AuthContext'
 import { Layout } from './components/Layout'
 import { Spinner } from './components/ui'
@@ -15,6 +15,14 @@ import { SignIn } from './pages/SignIn'
 import { SignUp } from './pages/SignUp'
 import { HowItWorks, Terms, Privacy } from './pages/static'
 
+function AcademicBanner() {
+  return (
+    <div className="border-b border-ink-line bg-well px-4 py-1.5 text-center text-[12.5px] font-medium text-mark-critical">
+      This app was built for academic purposes.
+    </div>
+  )
+}
+
 function FullPageSpinner() {
   return (
     <div className="flex min-h-screen items-center justify-center text-ink-muted">
@@ -25,25 +33,33 @@ function FullPageSpinner() {
 
 export default function App() {
   const { user, loading } = useAuth()
+  const location = useLocation()
+  // The report page prints as a bare document; keep the banner off it.
+  const showBanner = !location.pathname.endsWith('/report')
 
   if (loading) return <FullPageSpinner />
 
   if (!user) {
     return (
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <>
+        {showBanner && <AcademicBanner />}
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </>
     )
   }
 
   return (
-    <Routes>
+    <>
+      {showBanner && <AcademicBanner />}
+      <Routes>
       {/* The report renders without app chrome so it prints as a document. */}
       <Route path="/analyses/:analysisId/report" element={<Report />} />
       <Route path="/signin" element={<Navigate to="/" replace />} />
@@ -60,6 +76,7 @@ export default function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<NotFound />} />
       </Route>
-    </Routes>
+      </Routes>
+    </>
   )
 }
