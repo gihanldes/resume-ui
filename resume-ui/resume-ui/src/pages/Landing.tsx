@@ -89,6 +89,9 @@ export function Landing() {
       <main className="mx-auto w-full max-w-[984px] flex-1 px-5 sm:px-8">
         <section className="grid items-center gap-12 py-14 lg:grid-cols-[1.05fr_1fr] lg:py-20">
           <div>
+            <p className="rise mb-3 text-[13px] font-medium text-ink-muted">
+              This app was built for academic purposes.
+            </p>
             <h1 className="rise text-[34px] leading-[1.12] font-bold tracking-tight sm:text-[42px]">
               Your resume is screened by software before a person ever reads it. See that screen
               first.
@@ -111,9 +114,6 @@ export function Landing() {
             </div>
             <p className="rise mt-6 text-[13px] text-ink-dim" style={{ '--i': 3 } as React.CSSProperties}>
               PDF, DOCX or TXT · deterministic score · AI rewrites optional
-            </p>
-            <p className="rise mt-2 text-[13px] text-ink-dim" style={{ '--i': 4 } as React.CSSProperties}>
-              This app was built for academic purposes.
             </p>
           </div>
 
