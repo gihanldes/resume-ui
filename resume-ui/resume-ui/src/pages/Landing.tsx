@@ -112,6 +112,9 @@ export function Landing() {
             <p className="rise mt-6 text-[13px] text-ink-dim" style={{ '--i': 3 } as React.CSSProperties}>
               PDF, DOCX or TXT · deterministic score · AI rewrites optional
             </p>
+            <p className="rise mt-2 text-[13px] text-ink-dim" style={{ '--i': 4 } as React.CSSProperties}>
+              This app was built for academic purposes.
+            </p>
           </div>
 
           <SourceDemo />
